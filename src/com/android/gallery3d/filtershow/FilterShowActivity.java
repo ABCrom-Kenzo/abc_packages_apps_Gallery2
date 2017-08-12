@@ -436,8 +436,8 @@ public class FilterShowActivity extends AbstractPermissionActivity implements On
         if (mCurrentEditor.showsActionBar()) {
             setActionBar();
             showActionBar(true);
-        } else {
-            //showActionBar(false);
+        } else if (currentId == EditorCrop.ID) {
+            showActionBar(false);
         }
 
         if (representation.getFilterType() == FilterRepresentation.TYPE_WATERMARK_CATEGORY) {
